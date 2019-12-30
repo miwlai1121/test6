@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Upload a Photo</title>
+		<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+	</head>
+
+   <body>
+   	
+   	<h3>Title: <%= title %> <br></h3>
+	<h4>Description: <%= description %> <br></h4>
+	<td><img src=" data:<%=mimetype%>;base64, <%=image%>" style="width:100%"></td>
+	<table style="width:100%">
+	
+
+	<tr><td>Make: <%= make %> </td></tr>
+
+	<tr><td>Model: <%= model %> </td></tr>
+	<tr><td>Created On: <%= createdon %> </td></tr>
+	<tr><td>Map: <a href="/map?lat=<%=lat%>&lon=<%=lon%>">Click here to open</a></td>
+	</table>
+	<a href="/">Home</a>
+	
+	</body>
+</html>
